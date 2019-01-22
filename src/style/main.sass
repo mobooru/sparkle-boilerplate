@@ -1,0 +1,46 @@
+body
+  margin: 0px
+  font-family: sans-serif
+
+a
+  color: #333333
+  text-decoration: none
+
+input, button
+  &:focus
+    outline: none
+
+.route
+  height: 100vh
+  width: 100vw
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: #fff
+
+.route-enter
+  opacity: 0
+  z-index: 2
+  transform: scale(1.25)
+
+.route-enter.route-enter-active
+  opacity: 1
+  transform: scale(1)
+  transition: opacity 150ms ease-in, transform 150ms ease-in
+
+.route-exit
+  opacity: 1
+  z-index: 1
+  transform: scale(1)
+
+.route-exit.route-exit-active
+  opacity: 0
+  transform: scale(0.9)
+  transition: opacity 150ms ease-out, transform 150ms ease-out
