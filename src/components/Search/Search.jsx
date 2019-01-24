@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Connector from 'Connector'
+import { Connector } from 'Diluter'
 
 import { Link } from 'react-router-dom'
 
@@ -16,4 +16,4 @@ class Search extends Component {
   }
 }
 
-export default Connector(Search, ['search'])
+export default Connector(Search, ['SEARCH'])

@@ -23,8 +23,8 @@ module.exports = {
     modules: [path.resolve('./node_modules')],
     alias: {
       Helpers: path.resolve(__dirname, '../src/Helpers.js'),
-      Generic: path.resolve(__dirname, '../src/components/Generic'),
-      Connector: path.resolve(__dirname, '../src/Connector.js'),
+      Sparkle: path.resolve(__dirname, '../src/Sparkle'),
+      Diluter: path.resolve(__dirname, '../src/Diluter'),
       Components: path.resolve(__dirname, '../src/components'),
       Containers: path.resolve(__dirname, '../src/containers'),
       Actions: path.resolve(__dirname, '../src/actions')

@@ -1,5 +1,5 @@
 /* global fetch */
-export const fetchAutocomplete = async (dispatch, query) => {
+export const fetchAutocomplete = (query) => async (dispatch) => {
   dispatch({
     type: 'SEARCH',
     state: 'LOADING',

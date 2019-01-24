@@ -1,4 +1,4 @@
-export const search = {
+export const SEARCH = {
   query: '',
   suggestions: [],
   state: 'READY'

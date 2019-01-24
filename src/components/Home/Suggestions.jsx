@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { Link } from 'react-router-dom'
 
-import Hover from 'Generic/Hover'
+import { Hover } from 'Sparkle'
 import { AbbreviateNumber } from 'Helpers'
 import * as styles from './styles.js'
 
