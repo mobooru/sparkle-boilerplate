@@ -30,7 +30,8 @@ export const image = {
     width: '100%',
     objectFit: contain ? 'contain' : 'cover',
     filter: blur > 0 && `blur(${blur}px)`,
-    transform: scaleIn && `scale(${scaleIn})`,
+    transform: scaleIn && `scale(${scaleIn}) translateZ(0px)`,
+    willChange: 'opacity, filter, transform',
     transition: transitionSpeed > 0 ? `opacity ${transitionSpeed}ms, filter ${transitionSpeed}ms, transform ${transitionSpeed}ms` : 'none'
   }),
   loaded: {
