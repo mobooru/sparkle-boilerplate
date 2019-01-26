@@ -39,9 +39,16 @@ class Tiltable extends Component {
   }
 
   mouseenter (e) {
-    this.setState({ style: { transform: `rotateX(0deg) rotateY(0deg) scale(1.0)`, transition: 'transform 0.15s' } })
-    setTimeout(() => this.setState({ style: { ...this.state.style, transition: 'transform 0s' } }), 150)
-    this.refs.container.addEventListener('mousemove', this.mousemove, false)
+    const xScale = this.refs.item.clientWidth
+    const yScale = this.refs.item.clientHeight
+    const x = (e.offsetX - this.refs.item.clientWidth / 2) / xScale
+    const y = (e.offsetY - this.refs.item.clientHeight / 2) / yScale
+
+    this.setState({ style: { transform: `rotateX(${y * -10}deg) rotateY(${x * 10}deg) scale(1.025)`, transition: 'transform 0.15s' } })
+    setTimeout(() => {
+      this.setState({ style: { ...this.state.style, transition: 'transform 0s' } })
+      this.refs.container.addEventListener('mousemove', this.mousemove, false)
+    }, 150)
   }
 
   render () {
