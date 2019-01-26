@@ -48,3 +48,10 @@ export const particleField = {
     position: 'absolute'
   }
 }
+
+export const tiltable = {
+  container: {
+    transform: 'perspective(600px)',
+    transformStyle: 'preserve-3d'
+  }
+}
