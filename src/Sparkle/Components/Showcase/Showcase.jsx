@@ -137,10 +137,10 @@ class ParticleFieldShowcase extends Component {
       <DemoCard
         title={'ParticleField'}
         description={'React router + React transition group.'}
-        demoComponent={<ParticleField background={'#161617'} style={{ borderRadius: 6 }} />}
+        demoComponent={<ParticleField background={'#161617'} height={200} fps={24} style={{ borderRadius: 6 }} />}
         demoCode={`import { ParticleField } from 'Sparkle'
 render () {
-  return <ParticleField background={'#161617'} />
+  return <ParticleField background={'#161617'} height={200} fps={24} />
 }`}
       />
     )

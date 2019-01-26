@@ -42,6 +42,7 @@ export const image = {
 export const particleField = {
   height: '100%',
   width: '100%',
+  position: 'relative',
   canvas: {
     position: 'absolute'
   }

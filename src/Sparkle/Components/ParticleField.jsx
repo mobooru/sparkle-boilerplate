@@ -21,7 +21,7 @@ class ParticleField extends Component {
 
     window.addEventListener('resize', this.resize, false)
 
-    this.drawLoop = setInterval(this.draw, 1000 / 15)
+    this.drawLoop = setInterval(this.draw, 1000 / this.props.fps || 15)
   }
   componentWillUnmount () {
     window.removeEventListener('resize', this.resize)
@@ -161,7 +161,15 @@ class ParticleField extends Component {
   }
   render () {
     return (
-      <div style={{ ...styles.particleField, ...(this.props.background && { background: this.props.background }), ...this.props.style }} ref='Container'>
+      <div
+        style={{
+          ...styles.particleField,
+          ...(this.props.background && { background: this.props.background }),
+          ...(this.props.height && { height: `${this.props.height}px` }),
+          ...(this.props.width && { width: `${this.props.width}px` }),
+          ...this.props.style }}
+        ref='Container'
+      >
         <canvas
           ref='Canvas'
           style={{ ...styles.particleField.canvas, ...this.props.canvasStyle }}
