@@ -38,3 +38,11 @@ export const image = {
     transform: `scale(1)`
   }
 }
+
+export const particleField = {
+  height: '100%',
+  width: '100%',
+  canvas: {
+    position: 'absolute'
+  }
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Connector } from 'Diluter'
 
-import { Hover, Image } from 'Sparkle'
+import { Hover, Image, ParticleField } from 'Sparkle'
 
 import * as styles from './styles'
 import * as sstyles from '../styles'
@@ -23,6 +23,7 @@ class UIShowcase extends Component {
           <CardShowcase />
           <ImageShowcase />
           <AnimatedRouterShowcase />
+          <ParticleFieldShowcase />
         </Scroller>
       </div>
     )
@@ -124,6 +125,22 @@ render () {
       { path: '/outside', component: <p>Not Home, <Link to='/'>Go home.</Link></p> }
     ]}
   />
+}`}
+      />
+    )
+  }
+}
+
+class ParticleFieldShowcase extends Component {
+  render () {
+    return (
+      <DemoCard
+        title={'ParticleField'}
+        description={'React router + React transition group.'}
+        demoComponent={<ParticleField background={'#161617'} style={{ borderRadius: 6 }} />}
+        demoCode={`import { ParticleField } from 'Sparkle'
+render () {
+  return <ParticleField background={'#161617'} />
 }`}
       />
     )
